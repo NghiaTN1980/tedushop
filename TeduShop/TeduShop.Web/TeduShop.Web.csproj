@@ -189,6 +189,7 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="demo\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
