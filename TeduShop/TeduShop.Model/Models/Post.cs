@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TeduShop.Model.Abstract;
 
 namespace TeduShop.Model.Models
@@ -15,17 +10,23 @@ namespace TeduShop.Model.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        
+
         [Required]
+        [MaxLength(256)]
         public string Name { get; set; }
 
         [Required]
+        [MaxLength(256)]
+        [Column(TypeName = "varchar")]
         public string Alias { get; set; }
 
+        [Required]
         public int CategoryID { get; set; }
 
+        [MaxLength(256)]
         public string Image { set; get; }
 
+        [MaxLength(500)]
         public string Description { get; set; }
 
         public string Content { get; set; }
