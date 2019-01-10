@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TeduShop.Data.Infrastructure
 {
     //Thực thi các class được định nghĩa trong IRepository
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
         private TeduShopDbContext dataContext;
@@ -129,8 +129,7 @@ namespace TeduShop.Data.Infrastructure
         public bool CheckContains(Expression<Func<T,bool>> predicate)
         {
             return dataContext.Set<T>().Count<T>(predicate) > 0;
-        }
-            
+        }            
         #endregion
 
     }
