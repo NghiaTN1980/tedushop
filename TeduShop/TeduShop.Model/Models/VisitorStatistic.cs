@@ -10,6 +10,7 @@ namespace TeduShop.Model.Models
         [Key]
         public Guid ID { set; get; }
 
+        [Required]
         public DateTime VisitedDate { get; set; }
 
         [MaxLength(50)]

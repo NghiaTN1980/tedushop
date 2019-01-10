@@ -12,6 +12,7 @@ namespace TeduShop.Model.Models
         public int ID { set; get; }
 
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
 
         public virtual IEnumerable<Menu> Menus { set; get; }

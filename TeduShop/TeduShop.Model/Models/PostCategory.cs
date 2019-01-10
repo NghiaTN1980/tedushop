@@ -26,6 +26,8 @@ namespace TeduShop.Model.Models
 
         public int? ParentID { get; set; }
         public int? DisplayOrder { get; set; }
+
+        [MaxLength(256)]
         public string Image { get; set; }
 
         public bool? HomeFlag { get; set; }
