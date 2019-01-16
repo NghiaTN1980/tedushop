@@ -8,11 +8,14 @@ namespace TeduShop.Web.Mappings
     {
         public static void Configure()
         {
-            Mapper.Initialize(cfg =>
+            Mapper.Initialize(config =>
             {
-                cfg.CreateMap<Post, PostViewModel>();
-                cfg.CreateMap<PostCategory, PostCategoryViewModel>();
-                cfg.CreateMap<Tag, TagViewModel>();
+                config.CreateMap<Post, PostViewModel>();
+                config.CreateMap<PostCategory, PostCategoryViewModel>();
+                config.CreateMap<Tag, TagViewModel>();
+                config.CreateMap<ProductCategory, ProductCategoryViewModel>();
+                config.CreateMap<Product, ProductViewModel>();
+                config.CreateMap<ProductTag, ProductTagViewModel>();
             });
         }
     }

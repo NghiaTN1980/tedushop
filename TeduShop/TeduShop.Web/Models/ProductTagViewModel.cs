@@ -5,13 +5,13 @@ using System.Web;
 
 namespace TeduShop.Web.Models
 {
-    public class PostTagViewModel
+    public class ProductTagViewModel
     {
-        public int PostID { get; set; }
+        public int ProductID { get; set; }
 
         public string TagID { get; set; }
 
-        public virtual PostViewModel Post { get; set; }
+        public virtual ProductViewModel Product { get; set; }
 
         public virtual TagViewModel Tag { get; set; }
     }
