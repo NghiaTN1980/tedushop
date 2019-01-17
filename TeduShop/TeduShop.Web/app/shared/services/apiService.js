@@ -46,7 +46,5 @@
                 failure(error);
             });
         }
-
-
     }
 })(angular.module('tedushop.common'));

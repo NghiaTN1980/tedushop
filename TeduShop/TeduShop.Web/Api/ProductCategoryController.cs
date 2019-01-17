@@ -37,6 +37,7 @@ namespace TeduShop.Web.Api
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
               
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+
                 return response;
             });
         }

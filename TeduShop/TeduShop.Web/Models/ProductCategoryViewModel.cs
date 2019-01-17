@@ -10,10 +10,10 @@ namespace TeduShop.Web.Models
     {
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Yêu cầu nhập tên danh mục")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Yêu cầu nhập tiêu đề SEO")]
         public string Alias { get; set; }
 
 
@@ -41,7 +41,7 @@ namespace TeduShop.Web.Models
 
         public string MetaDescription { set; get; }
 
-        [Required]
+        [Required(ErrorMessage = "Trạng thái không được để trống")]
         public bool Status { get; set; }
     }
 }
