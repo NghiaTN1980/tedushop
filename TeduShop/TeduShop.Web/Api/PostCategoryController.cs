@@ -11,7 +11,7 @@ using TeduShop.Web.Infrastructure.Extensions;
 
 namespace TeduShop.Web.Api
 {
-    [RoutePrefix("api/postcategory")]
+    [RoutePrefix("API/PostCategory")]
     public class PostCategoryController : ApiControllerBase
     {
         IPostCategoryService _postCategoryService;
@@ -22,7 +22,7 @@ namespace TeduShop.Web.Api
             this._postCategoryService = postCategoryService;
         }
 
-        [Route("getall")]
+        [Route("GetAll")]
         public HttpResponseMessage Get(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
@@ -36,7 +36,7 @@ namespace TeduShop.Web.Api
             });
         }
 
-        [Route("add")]
+        [Route("Add")]
         public HttpResponseMessage Post(HttpRequestMessage request, PostCategoryViewModel postCategoryViewModel)
         {
             return CreateHttpResponse(request, () =>
@@ -60,7 +60,7 @@ namespace TeduShop.Web.Api
             });
         }
 
-        [Route("update")]
+        [Route("Update")]
         public HttpResponseMessage Put(HttpRequestMessage request, PostCategoryViewModel postCategoryViewModel)
         {
             return CreateHttpResponse(request, () =>
@@ -84,6 +84,7 @@ namespace TeduShop.Web.Api
             });
         }
 
+        
         public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>

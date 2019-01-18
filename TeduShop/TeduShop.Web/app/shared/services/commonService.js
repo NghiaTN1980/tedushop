@@ -5,6 +5,7 @@
     app.factory('commonService', commonService);
 
     function commonService() {
+
         return {
            getSeoTitle: getSeoTitle
         }

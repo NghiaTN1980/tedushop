@@ -11,7 +11,7 @@ using TeduShop.Web.App_Start;
 
 namespace TeduShop.Web.Api
 {
-    [RoutePrefix("api/account")]
+    [RoutePrefix("API/Account")]
     public class AccountController : ApiController
     {
         private ApplicationSignInManager _signInManager;
@@ -55,7 +55,7 @@ namespace TeduShop.Web.Api
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
-        [Route("login")]
+        [Route("Login")]
         public async Task<HttpResponseMessage> Login(HttpRequestMessage request, string userName, string password, bool rememberMe)
         {
             if (!ModelState.IsValid)
