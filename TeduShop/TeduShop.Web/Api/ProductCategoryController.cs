@@ -195,6 +195,7 @@ namespace TeduShop.Web.Api
                 else
                 {
                     var listProductCategory = new JavaScriptSerializer().Deserialize<List<int>>(checkedProductCategories);
+
                     foreach (var item in listProductCategory)
                     {
                         _productCategoryService.Delete(item);

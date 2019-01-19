@@ -15,7 +15,8 @@
         $scope.selectAll = selectAll;
         $scope.deleteMultiple = deleteMultiple;
 
-        function deleteMultiple() {
+        function deleteMultiple()
+        {
             var listId = [];
             $.each($scope.selected, function (i, item) {
                 listId.push(item.ID);
