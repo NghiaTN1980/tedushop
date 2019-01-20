@@ -4,6 +4,7 @@
     productListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter'];
 
     function productListController($scope, apiService, notificationService, $ngBootbox, $filter) {
+
         $scope.products = [];
         $scope.page = 0;
         $scope.pagesCount = 0;
