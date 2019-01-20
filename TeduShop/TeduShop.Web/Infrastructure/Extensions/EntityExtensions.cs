@@ -70,5 +70,31 @@ namespace TeduShop.Web.Infrastructure.Extensions
             productCategory.MetaKeyword = productCategoryViewModel.MetaKeyword;
             productCategory.Status = productCategoryViewModel.Status;
         }
+
+        public static void UpdateProduct(this Product product, ProductViewModel productViewModel)
+        {
+            product.ID = productViewModel.ID;
+            product.Name = productViewModel.Name;
+            product.Alias = productViewModel.Alias;
+            product.Description = productViewModel.Description;
+            product.CategoryID = productViewModel.CategoryID;
+            product.Content = productViewModel.Content;
+            product.Image = productViewModel.Image;
+            product.MoreImages = productViewModel.MoreImages;
+            product.Price = productViewModel.Price;
+            product.PromotionPrice = productViewModel.PromotionPrice;
+            product.Warranty = productViewModel.Warranty;
+            product.HomeFlag = productViewModel.HomeFlag;
+            product.HotFlag = productViewModel.HotFlag;
+            product.ViewCount = productViewModel.ViewCount;
+
+            product.CreatedDate = productViewModel.CreatedDate;
+            product.CreatedBy = productViewModel.CreatedBy;
+            product.UpdatedDate = productViewModel.UpdatedDate;
+            product.UpdatedBy = productViewModel.UpdatedBy;
+            product.MetaDescription = productViewModel.MetaDescription;
+            product.MetaKeyword = productViewModel.MetaKeyword;
+            product.Status = productViewModel.Status;
+        }
     }
 }
