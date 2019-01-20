@@ -50,6 +50,8 @@ namespace TeduShop.Web.Models
 
         public int? ViewCount { set; get; }
 
+        public string Tags { get; set; }
+
         public virtual ProductCategoryViewModel ProductCategory { get; set; }
     }
 }
