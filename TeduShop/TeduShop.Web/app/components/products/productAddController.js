@@ -4,6 +4,7 @@
     productAddController.$inject = ['apiService', '$scope', 'notificationService', '$state', 'commonService'];
 
     function productAddController(apiService, $scope, notificationService, $state, commonService) {
+
         $scope.product = {
             CreatedDate: new Date(),
             Status: true
@@ -13,6 +14,7 @@
             language: 'vi',
             height: '200px'
         };
+
         $scope.AddProduct = AddProduct;
         $scope.GetSeoTitle = GetSeoTitle;
 
@@ -36,6 +38,14 @@
             }, function () {
                 console.log('Cannot get list parent.');
             });
+        }
+
+        $scope.ChooseImage = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.product.Image = fileUrl;
+            }
+            finder.popup();
         }
 
         loadProductCategory();
